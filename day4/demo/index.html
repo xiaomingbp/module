@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		.menu{
+			width:270px;
+			background-color: #263238;
+			color:#fff;
+			overflow: hidden;
+		}
+		.top{
+			height:80px;
+			border-bottom:1px solid #3c474c;
+		}
+		.top > img{
+			vertical-align: middle;
+			margin: 23px 0 0 6px;
+		}
+		.title{
+			height: 57px;
+		}
+		.title > img{
+			margin-left: 15px;
+			vertical-align: middle;
+		}
+		.children{
+			background-color: #1f282d;
+			display: none;
+		}
+		.title.active+.children{
+			display: block;
+		}
+		.children > li{
+			height: 58px;
+			line-height: 58px;
+			text-indent: 58px;
+			border-left:3px solid #1f282d;
+		}
+		.title>.menu_text{
+			display: inline-block;
+			width:210px;
+			height: 58px;
+			line-height: 58px;
+			vertical-align: middle;
+			margin-left:8px;
+			position: relative;
+		}
+		.title>.menu_text:after{
+			content: "";
+		    background-image: url(images/1_15.png);
+		    width: 7px;
+		    height: 12px;
+		    display: inline-block;
+		    position: absolute;
+		    right:31px;
+		    top:23px;
+		}
+		.title.active>.menu_text:after{
+			content: "";
+		    background-image: url(images/1_10.png);
+		    width: 12px;
+		    height: 7px;
+		    display: inline-block;
+		    position: absolute;
+		    right:27px;
+		    top:23px;
+		}
+		.children > li:hover{
+			border-left:3px solid blue;
+		}
+		.menu_list{
+			width: 270px;
+		}
+	</style>
+</head>
+<body>
+	<div class="menu">
+		<div class="top">
+			<img src="images/1_03.png" alt="">
+		</div>
+		<ul class="menu_list">
+			<li class="menu_item">
+				<div class="title active">
+					<img src="images/1_07.png" alt="">					
+					<div class="menu_text">网站配置</div>
+				</div>
+				<ul class="children">
+					<li>aaa</li>
+					<li>bbb</li>
+					<li>ccc</li>
+					<li>ddd</li>
+				</ul>
+			</li>
+			<li class="menu_item">
+				<div class="title">
+					<img src="images/1_14.png" alt="">
+					<div class="menu_text">文章管理</div>					
+				</div>
+				<ul class="children">
+					<li>aaa</li>
+					<li>bbb</li>
+					<li>ccc</li>
+					<li>ddd</li>
+				</ul>
+			</li>
+			<li class="menu_item">
+				<div class="title">
+					<img src="images/1_19.png" alt="">
+					<div class="menu_text">订单管理</div>
+				</div>
+				<ul class="children">
+					<li>aaa</li>
+					<li>bbb</li>
+					<li>ccc</li>
+					<li>ddd</li>
+				</ul>
+			</li>			
+		</ul>
+	</div>
+	<script src="js/require.js" data-main="js/main"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="velocity.min.js"></script>
+	<style>
+		.box{
+			width:100px;
+			height:100px;
+			background-color: #f00;
+			/*display: none;*/
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="淡入" class="fadein">
+	<input type="button" value="淡出" class="fadeout">
+	<input type="button" value="收起" class="slideup">
+	<input type="button" value="展开" class="slidedown">
+	<div class="box">a</div>
+	
+</body>
+
+<script>
+	//Velocity(元素,样式,配置)
+	var box = document.querySelector(".box")
+	var fadein = document.querySelector(".fadein")
+	var fadeout = document.querySelector(".fadeout")
+	var slideup = document.querySelector(".slideup")
+	var slidedown = document.querySelector(".slidedown")
+	// Velocity(box,{
+	// 	translateX:"300px",
+	// 	translateY:"100px",
+	// 	scaleX:5,
+	// 	rotateY:180		
+	// },{
+		
+	// 	duration:1000, // 动画持续的时间
+	// 	//delay:0,   // 动画延迟时间
+	// 	easing:"linear"
+	// })
+	// 
+	fadein.onclick = function(){
+		Velocity(box,"fadeIn",2000);
+	}
+	fadeout.onclick = function(){
+		Velocity(box,"fadeOut",2000);
+	}
+	slideup.onclick = function(){
+		Velocity(box,"slideUp",2000);
+	}
+	slidedown.onclick = function(){
+		Velocity(box,"slideDown",2000);
+	}
+</script>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.left{
+			width:100px;
+			height:500px;
+			float: left;
+			background-color: #aaa;
+		}
+		.left>div{
+			height:40px;
+			background-color: #eee;
+			margin-bottom:2px;
+		}
+		.left>div.active{
+			background-color: #fff;
+		}
+		.right{
+			overflow: hidden;
+		}
+		.right>div{
+			display: none;
+		}
+		.right>div.active{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="left">
+		<div class="navbtn active">aaaa</div>
+		<div class="navbtn">bbbb</div>
+	</div>
+	<div class="right">
+		<div  class="active">我是aaa的内容</div>
+		<div>
+			<div><input type="button" value="添加" class="add"></div>
+			<table class="list">
+				<tr>
+					<th>姓名</th>
+					<th>籍贯</th>
+					<th>年龄</th>
+					<th>操作</th>
+				</tr>
+				<tr>
+					<td>aaa</td>
+					<td>dasdf</td>
+					<td>asdfas</td>
+					<td><input type="button" value="删除" class="del"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+<script src="lib/require.js" data-main="js/main"></script>
+</html>

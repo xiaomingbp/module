@@ -1,0 +1,100 @@
+原型
+
+	函数都有一个属性prototype       也是一个对象
+	function a(){
+		
+	}
+	console.log(typeof a.prototype)   // "object"
+	原型：
+		函数.prototype
+		对象.__proto__
+
+
+声明提升
+	var声明的变量和function声明的函数都有声明提升
+	提升到哪儿？
+		当前作用域的顶端
+		*注意：
+			变量只有声明的部分提升，赋值的部分在原地不提升
+			函数整体提升
+
+this指向
+	全局作用域里this就是window（严格模式下 全局里没有this）
+	
+	函数里才有this
+		this的指向跟函数被调用的位置没有关系，谁调用的函数，函数里的this就指向谁
+		
+	call()和apply()    修改this指向并调用函数
+	bind()  修改this指向生产新函数
+	
+	
+	function a(x,y,z,w,m){
+		console.log(this)
+	}
+	
+	a.call("abc",10,20,30,40,50)
+	a.apply("abc",[10,20,30,40,50])
+	
+	
+	var c = a.bind("edf")
+	c()
+
+箭头函数和高阶函数和回调函数和递归函数（名词解释）
+
+	箭头函数
+	
+		setTimeout(function(){
+		},1000)
+		
+		setTimeout(()=>{
+		},1000)
+		
+		btn.addEventListener("click",function(e){
+		})	
+		btn.addEventListener("click",(e)=>{
+		})
+		
+		arr.map(function(item,index,self){
+			return `<div>${item}</div>`
+		})
+		
+		arr.map((item,index,self)=>{
+			`<div>${item}</div>`
+		})
+	
+	高阶函数
+		把函数当做参数或返回值的函数
+			arr.forEach(function(){})
+		
+			arr.forEach(function(item,index){
+			})
+			arr.map(function(item,index){ // arr = [1,2,3]     ["1*","2*","3*"]
+				return item + "*"
+			})
+			arr.filter(function(item,index){ // arr = [1,2,3]
+				return item > 2
+			})
+			arr.every(function(item,index){   // arr = [1,2,3]
+				return item > 0
+			})
+			arr.some(function(item,index){
+				return item > 0
+			})
+			
+		回调函数
+			被当做参数使用的函数
+			function a(){
+			
+			}
+			function b(fn){
+				fn()
+			}
+			b(a)
+
+		递归函数
+			自己调用自己的函数
+			
+		闭包
+			函数里的函数
+
+

@@ -1,0 +1,28 @@
+define(function(){
+	return [
+		{
+			name:"aaaa",
+			lilun:55,
+			jineng:88
+		},
+		{
+			name:"bbb",
+			lilun:55,
+			jineng:88
+		},
+		{
+			name:"cccc",
+			lilun:55,
+			jineng:88
+		},
+		{
+			name:"dddd",
+			lilun:55,
+			jineng:88
+		},{
+			name:"eeee",
+			lilun:55,
+			jineng:88
+		}
+	]
+})

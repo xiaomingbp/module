@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.swaper{
+			width:1000px;
+			height:400px;
+			position: relative;
+			/*overflow: hidden;*/
+
+			margin:0 auto;
+		}
+		.swaper .imgs{
+			position: absolute;
+			width:5000px;
+			font-size: 0;
+			left:-1000px;
+		}
+		.swaper img{
+			width:1000px;
+			height:400px;
+		}
+	</style>
+	<script src="js/velocity.min.js"></script>
+</head>
+<body>
+	<div class="swaper">
+		<div class="imgs">
+			<img src="images/3.jpg" alt="">
+			<img src="images/1.jpg" alt="">
+			<img src="images/2.jpg" alt="">
+			<img src="images/3.jpg" alt="">
+			<img src="images/1.jpg" alt="">
+		</div>
+	</div>
+	<script>
+		
+		var index = 1
+		var pos_left = 1000;
+		var imgs = document.querySelector(".imgs")
+		setInterval(function(){
+			Velocity(imgs,{
+				left:-index * pos_left + "px"
+			},{
+				duration:300,
+				complete(){
+					if(index > 3){
+						index = 1;
+						imgs.style.left = -index * 1000 + "px";
+					}
+				}
+			})
+			index++;
+		},2000)
+		
+
+		V(
+			D.getClass(".imgs"),
+			{
+				left:-index * pos_left + "px"
+			},{
+				duration:300,
+				complete(){
+					if(index > 3){
+						index = 1;
+						D.getClass(".imgs").style.left = "0px"
+					}
+				}
+			}
+		);
+		index++;
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width:1000px;
+			margin:0 auto;
+		}
+		.box table{
+			width:100%;
+		}
+		.page{
+			text-align: center;
+		}
+		.page>span{
+			display: inline-block;
+			width:30px;
+			height:30px;
+			background-color: #aaa;
+			margin:4px;
+			line-height: 30px;
+			text-align: center;
+		}
+		.page>span.active{
+			background-color: blue;
+		}
+		.page>span.prevbtn{
+			width:60px;
+		}
+		.page>span.nextbtn{
+			width:60px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div>			
+			搜索：<input type="text" class="search" placeholder="关键字">
+			排序：
+			<select class="sort">
+				<option value="">请选择</option>
+				<option value="name">姓名</option>
+				<option value="lilun">理论</option>
+				<option value="jineng">技能</option>	
+			</select>
+			<input type="button" class="add" value="新增">
+		</div>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>姓名</th>
+					<th>理论</th>
+					<th>技能</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody class="list">
+				
+			</tbody>
+		</table>
+		<div class="page"></div>
+	</div>
+</body>
+<script src="lib/require.js" data-main="js/main"></script>
+</html>

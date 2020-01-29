@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 
+		模块化规范:
+			Commonjs 后端的模块化规范
+			AMD	require.js 加载模块的工具 前置加载
+			CMD sea.js 就近加载
+
+
+		require：
+			require() // 主模块
+			define() // 定义模块
+			require.config()  // 配置
+
+		data-main:指向主模块
+			data-main="lib/main.js"  主模块就是lib目录下的main.js文件
+				后面的.js可以不写 data-main="lib/main"
+	 -->
+</head>
+<body>
+	<div id="abc">abc</div>
+	<div class="edf">edf</div>
+</body>
+<script src="require.js" data-main="lib/main" async defer></script>
+</html>

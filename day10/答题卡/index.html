@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul,li{
+			list-style:upper-alpha;
+			list-style-position: inside;
+		}
+		.header{
+			width:1000px;
+			margin:20px auto;
+		}
+		.list{
+			width:1000px;
+			margin:0 auto;
+			background-color: gainsboro;
+			overflow: hidden;
+		}
+		.list .item{
+			margin:8px;
+		}
+		.list .item h2{
+			padding: 10px;
+			background-color: aliceblue;
+		}
+		.list .item li{
+			padding: 8px;
+			margin:4px 0;
+			background-color: floralwhite;
+		}
+		.list .item li.active{
+			background-color: #aaa;
+			color:#fff;
+		}
+		.answerbar{
+			position: fixed;
+			top:200px;
+			width:190px;
+			right:20px;
+			overflow: hidden;
+			background-color: #aaaaff;
+			padding: 4px;
+		}
+		.answerbar div{
+			width:30px;
+			height:30px;
+			background-color: red;
+			float: left;
+			margin:4px;
+			text-align: center;
+			line-height: 30px;
+		}
+		.answerbar div[data-answer]{
+			background-color: #aaa;
+		}
+		.footer{
+			width:1000px;
+			margin:50px auto;
+		}
+		.footer .submit{
+			width:100px;
+			height:40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>博士后的期末考试</h1>
+	</div>
+	<div class="list">
+		<div class="item">
+			<h2>aaaaaaaaaaaaaaaa</h2>
+			<ul>
+				<li><span>aaaaaaaaaaaaaa</span></li>
+				<li><input type="checkbox"><span>aaaaaaaaaaaaaa</span></li>
+				<li><input type="checkbox"><span>aaaaaaaaaaaaaa</span></li>
+				<li><input type="checkbox"><span>aaaaaaaaaaaaaa</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer"><input type="button" class="submit" value="提交"></div>
+	<div class="answerbar"></div>
+</body>
+<script src="lib/require.js" data-main="js/main"></script>
+</html>

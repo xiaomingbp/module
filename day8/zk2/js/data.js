@@ -1,0 +1,20 @@
+define(function(){
+	return [
+		{
+			title:"百度",
+			url:"http://www.baidu.com"
+		},
+		{
+			title:"淘宝",
+			url:"http://www.taobao.com"
+		},
+		{
+			title:"京东",
+			url:"http://www.jd.com"
+		},
+		{
+			title:"58",
+			url:"http://www.58.com"
+		}
+	]
+})

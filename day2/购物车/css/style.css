@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.shopping,.datalist,td{
+    border:1px solid #666;
+    border-collapse: collapse;
+}
+.shopping img,.datalist img{
+    width:60px;
+    height: 60px;
+}
+.shopping .jian,.shopping .jia,.shopping .num{
+    width:25px;
+    height:25px;
+    line-height: 25px;
+    text-align: center;
+}

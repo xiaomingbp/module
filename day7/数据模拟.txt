@@ -1,0 +1,169 @@
+对象数据
+
+
+数组数据
+
+
+var data = {
+	name:"",
+	age:"",
+	sex:""
+}
+
+
+var arr = [data,data,data,data,data,data]
+
+var imgs = ["img/1.jpg","img/1.jpg","img/1.jpg","img/1.jpg"]
+var rens = [
+	{
+		name:"",
+		age:"",
+		sex:""
+	},
+	{
+		name:"",
+		age:"",
+		sex:""
+	},
+	{
+		name:"",
+		age:"",
+		sex:""
+	},
+	{
+		name:"",
+		age:"",
+		sex:""
+	}
+]
+
+
+/*********************************************/
+
+
+var data = [
+	{
+		title:"一级菜单一",
+		erji:[
+			{
+				title:"二级菜单一",
+				sanji:[
+
+				]
+			}
+		]
+	},
+	{
+		title:"一级菜单二",
+		erji:["二级菜单一","二级菜单二","二级菜单三"]
+	},
+	{
+		title:"一级菜单三",
+		erji:["二级菜单一","二级菜单二","二级菜单三"]
+	}
+]
+
+
+/*****************************************************/
+
+var data = {
+	menu:[
+		{
+			title:"一级菜单一",
+			erji:[
+				{
+					title:"二级菜单一",
+					sanji:[
+
+					]
+				}
+			]
+		},
+		{
+			title:"一级菜单二",
+			erji:["二级菜单一","二级菜单二","二级菜单三"]
+		},
+		{
+			title:"一级菜单三",
+			erji:["二级菜单一","二级菜单二","二级菜单三"]
+		}
+	],
+	car:[
+		{
+			title:"",
+			price:"",
+			src:"",
+			desc:""
+		},
+		{
+			title:"",
+			price:"",
+			src:"",
+			desc:""
+		},
+		{
+			title:"",
+			price:"",
+			src:"",
+			desc:""
+		},
+		{
+			title:"",
+			price:"",
+			src:"",
+			desc:""
+		}
+	]
+}
+
+
+/**************************************************************/
+
+json数据
+
+	json对象
+	{
+		"title":"aaaaa",
+		"age":12
+	}
+
+	json数组
+
+		["aaa","aaaa","adasdf"]
+		{
+			imgs:[
+				"img/1.jpg",
+				"img/2.jpg"
+			]
+		}
+
+
+	json字符串
+		'{"title":"aaaaa","age":12}'
+
+		'{
+			imgs:[
+				"img/1.jpg",
+				"img/2.jpg"
+			]
+		}'
+
+		'["aaa","aaaa","adasdf"]'
+
+
+	json对象和json字符串的互转
+
+		JSON.stringify(json对象)  返回结果是：json字符串
+		JSON.parse(json字符串)  返回结果是：json对象
+
+
+/************************************************************/
+
+
+模拟数据：
+	导航
+	购物车
+	菜单（三级数据）
+
+
+

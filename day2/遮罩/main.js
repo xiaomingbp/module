@@ -1,0 +1,3 @@
+require(["zz"],function(){
+	
+})

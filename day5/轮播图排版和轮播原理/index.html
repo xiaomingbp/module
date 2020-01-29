@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.swaper{  /* 可视口 */
+			width:1000px;
+			height:400px;
+			margin:0 auto;
+			position: relative;
+			overflow: hidden;
+		}
+		.imgs{
+			width:500%;
+			font-size:0;
+			position: absolute;
+			left:0px;
+			transform:translateX(-1000px);
+		}
+		.imgs > img{
+			width:1000px;
+			height:400px;
+		}
+	</style>
+</head>
+<body>
+	<div class="swaper">
+		<div class="imgs">
+			<img src="images/3.jpg" alt="">
+			<img src="images/1.jpg" alt="">
+			<img src="images/2.jpg" alt="">
+			<img src="images/3.jpg" alt="">
+			<img src="images/1.jpg" alt="">
+		</div>
+	</div>
+	<script src="lib/require.js" data-main="lib/main"></script>
+</body>
+</html>

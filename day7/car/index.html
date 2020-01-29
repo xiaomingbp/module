@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.top{
+			width:1200px;
+			margin:0 auto;
+		}
+		.top input{
+			margin:4px;
+		}
+		.goods_list{
+			width:1200px;
+			margin:0 auto;
+			overflow: hidden;
+		}
+		.goods_list .item{
+			float: left;
+			border:1px solid #eee;
+			margin:4px;
+		}
+		.goods_list img{
+			width:150px;
+			height:100px;
+		}
+		.carbtn{
+			position: fixed;
+			right:10px;
+			border:1px solid #000;
+			top:200px;
+		}
+		.car{
+			display: none;
+			position: fixed;
+			bottom:0px;
+			background-color: #fff;
+			width:100%;
+			height:100%;
+		}
+		.car.active{
+			display: block;
+			overflow: hidden;
+		}
+		.car table{
+			width:1000px;
+			margin:0 auto;
+			background-color: #fff;
+		}
+		.car .jian,.car .jia,.car .num{
+			width:30px;
+			text-align: center;
+		}
+		.car img{
+			width:50px;
+			height: 50px;
+		}
+		.allprice,.allnum{
+			width:1000px;
+			margin:20px auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="top">
+		<input type="button" class="add" value="添加">
+	</div>
+	<div class="goods_list">
+		<div class="item">
+			<img src="imgs/1.jpg" alt="">
+			<div class="title">商品一</div>
+			<div class="price">1000</div>
+			<div>
+				<input type="button" value="添加购物车">
+				<input type="button" value="收藏">
+			</div>
+		</div>
+		
+	</div>
+	<div class="carbtn">购物车</div>
+	<div class="car">
+		<table border="1">
+			<thead>
+				<tr>
+					<th><input type="checkbox" class="allcheck">全选</th>
+					<th>标题</th>
+					<th>图片</th>
+					<th>价格</th>
+					<th>描述</th>
+					<th>数量</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody  class="glist">
+				<tr>
+					<th><input type="checkbox"></th>
+					<th>啊啊啊啊啊</th>
+					<th><img src="imgs/1.jpg" alt=""></th>
+					<th>1000</th>
+					<th>啊啊啊啊啊啊啊</th>
+					<th>
+						<input type="button" class="jian" value="-">
+						<input type="text" class="num" value="1">
+						<input type="button" class="jia" value="+">
+					</th>
+					<th><input type="button" class="del" value="删除"></th>
+				</tr>
+			</tbody>
+
+		</table>
+		<div class="allprice">总价：<span>0</span>元</div>	
+		<div class="allnum">总件：<span>0</span>个</div>	
+	</div>
+</body>
+<script src="lib/require.js" data-main="js/main"></script>
+</html>

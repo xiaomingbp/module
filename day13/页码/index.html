@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.page > span{
+			display: inline-block;
+			width:30px;
+			text-align: center;
+			height:30px;
+			line-height: 30px;
+			background-color: #aaa;
+			border-radius: 3px;
+			margin:4px;
+			cursor: pointer;
+		}
+		.page > span.home,
+		.page > span.prev,
+		.page > span.next,
+		.page > span.last{
+			width:60px;
+		}
+	</style>
+</head>
+<body>
+	<div class="page"></div>
+</body>
+<script src="lib/require.js" data-main="js/main"></script>
+</html>

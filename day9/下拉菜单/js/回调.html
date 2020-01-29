@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="box"></div>
+	<script>
+		var data = [1,2,3,4,5]
+		var box = document.querySelector(".box")
+
+		function rander(el,arr,fn){
+			el.innerHTML = arr.map(function(item){
+				return fn(item)
+			}).join("")
+		}
+
+		rander(box,data,function(item){
+			return `<span>${item}</span>`
+		});
+
+	</script>
+</body>
+</html>

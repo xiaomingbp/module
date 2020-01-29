@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.swaper{
+			width:1000px;
+			height:400px;
+
+			margin:0 auto;
+			position: relative;
+		}
+		.imgs{
+			width:1000px;
+			height:400px;
+		}
+		.swaper img{
+			width:1000px;
+			height:400px;
+			display: none;
+		}
+		.swaper img.active{
+			display: block;
+		}
+		.btns{
+			position: absolute;
+			top:200px;
+			width:100%;
+			overflow: hidden;
+		}
+		.btns>span{
+			display: inline-block;
+			width:60px;
+			height:60px;
+			background-color: #000;
+		}
+		.btns .next{
+			float: right;
+		}
+		.swaper .focus{
+			position: absolute;
+			bottom:0;
+			text-align: center;
+			width:100%;
+		}
+		.swaper .focus span{
+			display: inline-block;
+			width:15px;
+			height:15px;
+			border-radius: 50%;
+			background-color: red;
+			margin:4px;
+		}
+		.swaper .focus span.active{
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="swaper">
+		<div class="imgs">
+			<img class="active" src="images/1.jpg" alt="">
+			<img src="images/2.jpg" alt="">
+			<img src="images/3.jpg" alt="">
+		</div>
+		<div class="btns">
+			<span class="prev"><</span>
+			<span class="next">></span>
+		</div>
+		<div class="focus">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+</body>
+<script src="lib/require.js" data-main="js/main"></script>
+</html>

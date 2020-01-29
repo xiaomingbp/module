@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width:1000px;
+			border:1px solid red;
+			margin:0 auto;
+		}
+		.box>div{
+			height:600px;
+		}
+		.fixed{
+			position: fixed;
+			top:200px;
+			right:20px;
+			border:1px solid red;
+		}
+		.fixed>div{
+			height:30px;
+			width:30px;
+		}
+		.fixed>div.active{
+			background-color: #fff;
+			font-size: 24px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div>aaaaa</div>
+	</div>
+	<div class="fixed"></div>
+</body>
+<script src="lib/require.js" data-main="js/main"></script>
+</html>

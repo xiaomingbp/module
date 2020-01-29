@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul,li{
+			list-style: none;
+		}
+		.box{
+			border:1px solid red;
+		}
+		.xiala{
+			width:250px;
+		}
+		.search{
+			width:290px;
+			height:40px;
+			margin:4px;
+		}
+		.xiala{
+			width:300px;
+			border:1px solid #aaa;
+			margin:0 auto;
+		}
+		.list{
+			border:1px solid #aaa;
+			width:300px;
+			display: none;
+		}
+		.list.active{
+			display: block;
+		}
+		.list >li{
+			height:30px;
+			line-height: 30px;
+			margin:4px;
+		}
+		.list >li.active{
+			background-color: #00f500;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+
+	<div class="xiala">
+		<input type="text" class="search">
+		<ul class="list"></ul>
+	</div>
+</body>
+<script src="lib/require.js" data-main="js/main"></script>
+</html>

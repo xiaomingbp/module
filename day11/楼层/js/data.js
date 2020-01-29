@@ -1,0 +1,29 @@
+define(function(){
+	return [
+		{
+			title:"aa",
+			content:"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			color:"#00ffff"
+		},
+		{
+			title:"bb",
+			content:"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			color:"#0055ff"
+		},
+		{
+			title:"cc",
+			content:"cccccccccccccccccccccccccccccccccc",
+			color:"#5555ff"
+		},
+		{
+			title:"dd",
+			content:"ddddddddddddddddddddddddddddddd",
+			color:"#ff55ff"
+		},
+		{
+			title:"ee",
+			content:"ddddddddddddddddddddddddddddddddddddddddd",
+			color:"#ff5500"
+		}
+	]
+})

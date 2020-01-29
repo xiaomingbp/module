@@ -1,0 +1,51 @@
+1、Velocity(参数1，参数2，参数3)
+  参数1：操作的元素
+  参数2：值是对象 {} 对那些属性执行动画
+      {
+          width:200,
+          height:300
+      }
+      注意：修改背景颜色 backgroundColor或者"background-color" 颜色的值必须是 带#
+      凡是css属性中带- 要么转驼峰  要么加“”
+  参数3:对象 
+    {
+        duration:2000,动画持续的时间
+        delay:10000,动画延迟执行的时间
+        begin:function(){
+            动画开始之前做的做的事情
+            console.log(123);
+        },
+        complete:function(){
+            动画结束后做的事情
+            console.log("动画结束了");
+        },
+        loop:3, 动画循环的次数 值是数字  无限循环  true
+        easing:
+                "ease-in" 逐渐加速
+                "ease-out" 逐渐减速
+                "ease-in-out" 先加速再减速
+                "linear"匀速
+    }
+2、转换
+    translateX水平方向平移
+    translateY垂直方向平移
+    scale:2  宽度和高度扩大为原来的2倍  
+    scaleX:3  宽度扩大为原来的3倍
+    scaleY:3   高度扩大为原来的3倍
+    旋转
+    rotateX:沿着X轴旋转
+3、淡入淡出
+    Velocity(元素,"fadeIn",2000) 淡入
+    Velocity(元素,"fadeOut",2000) 淡出
+4、展开收起
+   Velocity(元素,"slideUp",2000)  收起
+   Velocity(元素,"slideDown",2000) 展开
+5、
+    Velocity(元素,"stop")   停止动画
+    Velocity(元素,"pause")  暂停动画
+    Velocity(元素,"resume") 继续动画
+    Velocity(元素,"reverse") 恢复初始状态
+6、楼层的
+    Velocity(滚动到的元素,"scroll",{
+        duration:2000
+    })

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="box">
+		
+	</div>
+	<input type="button" value="确认" class="btn">
+</body>
+<script>
+	function render(el,callback){
+		el.innerHTML = callback();
+	}
+
+	render(
+		document.querySelector(".box"),
+		function(){
+			return `<div>aaaa</div>`
+		}
+	)
+
+
+
+</script>
+</html>

@@ -1,0 +1,179 @@
+定义一个弹框模块
+
+添加信息
+编辑信息
+删除信息
+
+
+排版：
+	表单
+	删除按钮
+	取消按钮
+	完成按钮
+
+功能：
+	点击删除按钮后：
+		提供下标或提供要删除的数据
+		删除弹框
+
+	点击取消按钮：
+		删除弹框
+
+	点击完成按钮：
+		提供要修改的数据
+
+/*********************************************************************/
+myForm.js
+
+define(function(){
+	
+	function Win(obj){
+		var div = document.createElement("div")
+
+		var data = obj.data || {};
+		div.innerHTML = `
+			<div>
+				<input type="text" class="title" value="${data.title || ""}">
+				<input type="text" class="url" value="${data.url || ""}">
+
+				<input type="button" class="del" value="删除">
+				<input type="button" class="quit" value="取消">
+				<input type="button" class="finish" value="完成">
+			</div>
+		`
+
+		div.addEventListener("click",function(e){
+			if(e.target.classList.contains("del")){				
+				obj.delData({
+					title:div.querySelector("title").value,
+					url:div.querySelector("url").value
+				})
+				div.remove()
+			}
+			if(e.target.classList.contains("quit")){
+				div.remove()
+			}
+			if(e.target.classList.contains("finish")){
+				obj.editData({
+					title:div.querySelector("title").value,
+					url:div.querySelector("url").value
+				})
+				div.remove()
+			}
+		})
+
+
+		document.body.appendChild(div)
+
+	}
+
+	return {
+		form:Win
+	}
+
+})
+
+/**************************************************************/
+list.js
+
+	渲染
+	添加
+	修改
+	删除
+
+define(function(){
+	/*
+		obj:
+			data数据
+			list渲染数据的盒子
+
+
+	 */
+	function List(obj){ 
+		Object.assign(this,obj);
+	}
+	List.prototype = {
+		constructor:List,
+		rander(){
+			this.list.innerHTML = this.data.map(function(){
+				return `结构`
+			}).join("")
+		},
+		add(item){
+			this.data.push(item);
+			this.rander();
+		},
+		edit(oldobj,newobj){
+			var that = this;
+			this.data.forEach(function(item,index){
+				if(item.title == oldobj.title &&　item.url == oldobj.url){
+					that.data[index] = newobj;
+				}
+			})
+
+			this.rander();
+		},
+		del(data){
+			this.data = this.data.filter(function(item){
+				return data.title != item.title &&　data.url != item.url
+			})
+			this.rander();
+		},
+		bindEvent(){
+			var that = this;
+			this.list.addEventListener("click",function(e){
+				if(e.target == 图片){
+					that.clickBox({
+						title:图片上的data-title属性的值,
+						url:图片上的data-url属性的值
+					})
+				}
+			})
+		}
+	}
+
+
+})
+
+
+
+
+
+/********************************************************/
+main.js
+
+require(["myForm","list"],function(W,L){
+
+	var list = new L({
+		data:数据,
+		list:渲染数据的元素,
+		clickBox:function(itemdata){
+			/*
+				{
+					title:图片上的data-title属性的值,
+					url:图片上的data-url属性的值
+				}
+			*/
+		
+
+			W.form({
+				data:{
+					title:itemdata.title
+					url:itemdata.url
+				},
+				delData(data){
+					list.del(data);
+				},
+				editData(data){
+					list.edit(itemdata,data);
+				}
+			})
+
+		}
+	})
+
+
+	
+	
+})
+

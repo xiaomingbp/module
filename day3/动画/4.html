@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width:300px;
+             border:1px solid;
+             display: none;
+        }
+    </style>
+</head>
+<body>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, numquam totam quibusdam aperiam assumenda nobis atque nisi, quasi aut similique laudantium eaque ullam ea optio debitis magni. Quibusdam a quasi, pariatur illo itaque necessitatibus nemo enim impedit exercitationem eveniet! Sapiente dolorem, corporis amet esse omnis natus facilis iusto neque ullam optio nihil eius. Velit quisquam similique qui dolorum vitae, enim recusandae ad ipsum aliquid odio voluptatibus voluptates minus. Voluptates nesciunt commodi cupiditate asperiores, molestiae amet ad consequuntur aut, officia libero error sint. Aspernatur, minus! Molestiae dolor necessitatibus quaerat nam nulla repellendus veniam culpa officiis beatae excepturi ea, molestias aliquam tenetur?</div>
+</body>
+<script src="velocity.min.js"></script>
+<script>
+    var div = document.querySelector("div");
+    // Velocity(div,"fadeIn",2000);
+    // Velocity(div,"fadeOut",{
+    //     duration:2000,
+    //     delay:3000
+    // })
+    Velocity(div,"slideDown",2000);
+    Velocity(div,"slideUp",{
+        duration:2000,
+        delay:3000
+    })
+</script>
+</html>

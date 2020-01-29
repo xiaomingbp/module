@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.tab{
+			width:500px;
+			border:1px solid #aaa;
+			margin:0 auto;
+		}
+		.btns{
+			border-bottom: 1px solid #aaa;
+		}
+		.btns > span{
+			display: inline-block;
+			width:100px;
+			height:30px;
+			line-height: 30px;
+			text-align: center;
+		}
+		.btns > span.active{
+			background-color: blue;
+			color:#fff;
+		}
+		.cons>div{
+			height:300px;
+			display: none;
+		}
+		.cons>div.active{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="tab">
+		<div class="btns">
+			<span class="active">a</span>
+			<span>b</span>
+			<span>c</span>
+		</div>
+		<div class="cons">
+			<div class="active">aa</div>
+			<div>bb</div>
+			<div>cc</div>
+		</div>
+	</div>
+	<script src="require.js" data-main="main"></script>
+</body>
+</html>

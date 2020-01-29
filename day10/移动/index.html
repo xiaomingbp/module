@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width:1000px;
+			margin:0 auto;
+			box-shadow: 0 0 5px #000;
+		}
+		.box .item{
+			padding: 20px;
+		}
+		.box .item ol{
+			margin:0;
+			padding: 0;
+			list-style-position: inside; 
+		}
+		.box .item li.active{
+			background-color: #aaa;
+		}
+		.answers{
+			position: fixed;
+			top:200px;
+			right:20px;
+			width:190px;
+			overflow: hidden;
+			padding: 4px;
+			background-color: #aaa;
+		}
+		.answers .item{
+			float: left;
+			width:30px;
+			height:30px;
+			margin:4px;
+			background-color: red;
+		}
+		.answers .item.active{
+			background-color: blue;
+		}
+		
+		.footer{
+			width:1000px;
+			margin:20px auto;
+		}
+		.footer .submit{
+			width:100px;
+			height:40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="item">
+			<h2>asdfasdfasdf</h2>
+			<ol type="A">
+				<li>aaaaaaaaa</li>
+				<li>aaaaaaaaa</li>
+				<li>aaaaaaaaa</li>
+				<li>aaaaaaaaa</li>
+			</ol>
+		</div>		
+	</div>
+	<div class="footer">
+		<input type="button" class="submit" value="提交">
+	</div>
+	<div class="answers">
+		<div class="item"></div>		
+	</div>
+</body>
+<script src="lib/require.js" data-main="js/main"></script>
+</html> 

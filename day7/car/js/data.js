@@ -1,0 +1,28 @@
+define(function(){
+	return [
+		{
+			"title":"商品一",
+			"price":100,
+			"desc":"商品一商品一",
+			"src":"imgs/1.jpg"
+		},
+		{
+			"title":"商品er",
+			"price":8000,
+			"desc":"商品一商品一",
+			"src":"imgs/2.jpg"
+		},
+		{
+			"title":"商品san",
+			"price":580,
+			"desc":"商品一商品一",
+			"src":"imgs/3.jpg"
+		},
+		{
+			"title":"商品si",
+			"price":220,
+			"desc":"商品一商品一",
+			"src":"imgs/4.jpg"
+		}
+	]
+})

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width:300px;
+			height: 40px;
+			border:1px solid red;
+		}
+		.box span{
+			background-color: #00aa00;
+			margin:2px;
+		}
+		ul{
+			width:200px;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		li{
+			margin:2px;
+		}
+		li.active{
+			background-color: red;
+
+		}
+	</style>
+</head>
+<body>
+	<input type="text" class="box">
+	<ul class="list">		
+		<li>
+			<div>wwww</div>
+			<ul>
+				<li><input type="checkbox">aaa</li>
+				<li><input type="checkbox">bbb</li>
+				<li><input type="checkbox">ccc</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+<script src="lib/require.js" data-main="js/main"></script>
+</html>

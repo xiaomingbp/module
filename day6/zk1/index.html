@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul,li{
+			list-style: none;
+		}
+		.menu{
+			background-color: #aaa;
+			float: left;
+			overflow: hidden;
+		}
+		.menu_list .menu_item{
+			width:200px;
+			border:1px solid red;
+		}
+		.menu_list .title{
+			height:45px;
+			line-height: 45px;
+			background-color: #999;
+			overflow: hidden;
+		}
+		.menu_list .title>div{
+			float: left;
+		}
+		.menu_list .tubiao{
+			width:30px;
+			height:30px;
+			background-color: #000;
+			margin-top:10px;
+
+		}
+		.menu_list div.sanjiao{
+			float: right;
+			width:30px;
+			height:30px;
+			line-height: 30px;
+			margin-top:10px;
+			margin-right:10px;
+			text-align: center;
+		}
+		.menu_list ul{
+			display: none;
+		}
+		.menu_list li{
+			height:30px;
+			line-height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="menu">
+		<div class="top">
+			<input type="button" class="toggle" value="点击">
+		</div>
+		<div class="menu_list">			
+		</div>
+	</div>
+</body>
+<script src="lib/require.js" data-main="js/main"></script>
+</html>

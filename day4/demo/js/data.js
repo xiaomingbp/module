@@ -1,0 +1,28 @@
+define(function(){
+	return [
+		{
+			title:"a",
+			children:[
+				"ab",
+				"ac",
+				"ad"
+			]
+		},
+		{
+			title:"b",
+			children:[
+				"ba",
+				"bc",
+				"bd"
+			]
+		},
+		{
+			title:"c",
+			children:[
+				"ca",
+				"cb",
+				"cd"
+			]
+		}
+	]
+})
