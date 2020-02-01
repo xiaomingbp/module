@@ -1,0 +1,22 @@
+define(function(){
+	return [
+		{
+			id:1,
+			name:"要威",
+			age:20,
+			sex:"男"
+		},
+		{
+			id:2,
+			name:"曹郁聪",
+			age:21,
+			sex:"男"
+		},
+		{
+			id:3,
+			name:"孙雨萌",
+			age:18,
+			sex:"女"
+		}
+	]
+})

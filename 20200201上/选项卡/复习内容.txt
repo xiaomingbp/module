@@ -1,0 +1,43 @@
+选项卡
+	第一种
+		<div>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+
+		<div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+
+	第二种
+		<div>
+			<span data-index="0"></span>
+			<span data-index="1"></span>
+			<span data-index="2"></span>
+		</div>
+
+		<div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+
+提示框
+	
+	alert
+		创建div
+		写样式
+		布局里面的内容
+		绑定事件
+		显示在页面上
+	prompt
+
+
+		有返回结果（回调函数实现数据返回）
+	confirm
+
+	form
+
