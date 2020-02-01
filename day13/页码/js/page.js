@@ -1,9 +1,9 @@
 define(function(){
 	function Page(obj){
 		var defaults = {
-			pn:3,
-			count:20,
-			index:1
+			pn:3, // 当前页面的前后3个页码
+			count:20,  // 总页数
+			index:1 // 默认当前页码
 		}
 		Object.assign(this,defaults,obj);
 		this.init();
@@ -15,22 +15,23 @@ define(function(){
 			this.bindEvent();
 		},
 		update(){
-			this.rander();
-			this.action(this.index);
+			this.rander(); // 重新渲染页码
+			this.action(this.index); // 点击页面时返回当前页码
 		},
 		rander(){
 			var start = 1;
 			var end = this.count;
-			
+			//this.pn*2+1 === 做多显示的页码数
 			if(this.count > this.pn*2+1){
 				start = this.index - this.pn;
 				end = this.index + this.pn;
+
 				if(this.index - this.pn <= 1){
 					start = 1;
 					end = this.pn*2+1;
 				}
 				if(this.index + this.pn >= this.count){
-					start = this.count - this.pn*2+1;
+					start = this.count - this.pn*2;
 					end = this.count;
 				}
 			}

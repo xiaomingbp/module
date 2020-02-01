@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.page{}
+		.page>span{
+			display: inline-block;
+			background-color: #aaa;
+			border-radius: 3px;
+			margin:4px;
+			height:25px;
+			line-height: 25px;
+			width:30px;
+			text-align: center;
+			font-size: 14px;
+			user-select: none; /* 禁止文本被选中 */
+		}
+		.page>span.active{
+			background-color: red;
+		}
+		.page>span.home,
+		.page>span.last,
+		.page>span.prev,
+		.page>span.next{
+			width:60px;
+		}
+	</style>
+</head>
+<body>
+	<div class="page">
+		<!-- <span class="home">首页</span>
+		<span class="prev">上一页</span>
+		<span class="item">1</span>
+		<span class="item">2</span>
+		<span class="item active">3</span>
+		<span class="item">4</span>
+		<span class="item">5</span>
+		<span class="next">下一页</span>
+		<span class="last">尾页</span> -->
+	</div>
+</body>
+<script src="lib/require.js" data-main="js/main"></script>
+</html>
