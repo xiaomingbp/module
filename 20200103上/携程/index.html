@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width:600px;
+			border:1px solid #aaa;
+			overflow: hidden;
+		}
+		.box_left{
+			float: left;
+			width:100px;
+			border-right:1px solid #aaa;
+		}
+		.box_left>div{
+			height:40px;
+			line-height: 40px;
+			border-bottom: 1px solid #aaa;
+			text-indent: 20px;
+		}
+		.box_right{
+			overflow: hidden;
+		}
+		.box_right>div{
+			display: none;
+		}
+		.box_right>div.active{
+			display: block;
+		}
+		.box_right>div>div>div{
+			display: none;
+		}
+		.box_right>div>div>div.active{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="box_left">
+			<div>酒店</div>
+			<div>机票</div>
+			<div>旅游</div>
+			<div>跟团游</div>
+			<div>自由行</div>
+			<div>火车</div>
+			<div>用车</div>
+		</div>
+		<div class="box_right">
+			<div class="jiudian active">
+				<div>
+					<span>国内酒店</span>
+					<span>海外酒店</span>
+					<span>民宿</span>
+					<span>酒店团购</span>
+					<span>酒店+景点</span>
+					<span>会议•团房</span>
+				</div>
+				<div>
+					<div>国内酒店国内酒店</div>
+					<div>海外酒店海外酒店</div>
+					<div>民宿民宿</div>
+					<div>酒店团购酒店团购</div>
+					<div>酒店+景点酒店+景点</div>
+					<div>会议•团房会议•团房</div>
+				</div>
+			</div>
+			<div class="jipiao">
+				<div>
+					<span>国内机票</span>
+					<span>国际•港澳台机票</span>
+					<span>发现低价</span>
+				</div>
+				<div>
+					<div>国内机票国内机票</div>
+					<div>国际•港澳台机票国际•港澳台机票</div>
+					<div>发现低价发现低价</div>
+				</div>
+			</div>
+			<div class="lvyou">
+				<div>
+					<span>国内机票</span>
+					<span>国际•港澳台机票</span>
+					<span>发现低价</span>
+				</div>
+				<div>
+					<div>国内机票国内机票</div>
+					<div>国际•港澳台机票国际•港澳台机票</div>
+					<div>发现低价发现低价</div>
+				</div>
+			</div>
+			<div class="gentuanyou">
+				<div>
+					<span>国内机票</span>
+					<span>国际•港澳台机票</span>
+					<span>发现低价</span>
+				</div>
+				<div>
+					<div>国内机票国内机票</div>
+					<div>国际•港澳台机票国际•港澳台机票</div>
+					<div>发现低价发现低价</div>
+				</div>
+			</div>
+			<div class="ziyouxing">
+				<div>
+					<span>国内机票</span>
+					<span>国际•港澳台机票</span>
+					<span>发现低价</span>
+				</div>
+				<div>
+					<div>国内机票国内机票</div>
+					<div>国际•港澳台机票国际•港澳台机票</div>
+					<div>发现低价发现低价</div>
+				</div>
+			</div>
+			<div class="huoche">
+				<div>
+					<span>国内机票</span>
+					<span>国际•港澳台机票</span>
+					<span>发现低价</span>
+				</div>
+				<div>
+					<div>国内机票国内机票</div>
+					<div>国际•港澳台机票国际•港澳台机票</div>
+					<div>发现低价发现低价</div>
+				</div>
+			</div>
+			<div class="yongche">
+				<div>
+					<span>国内机票</span>
+					<span>国际•港澳台机票</span>
+					<span>发现低价</span>
+				</div>
+				<div>
+					<div>国内机票国内机票</div>
+					<div>国际•港澳台机票国际•港澳台机票</div>
+					<div>发现低价发现低价</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="lib/require.js" data-main="js/main"></script>
+</html>
