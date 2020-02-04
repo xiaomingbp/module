@@ -31,28 +31,13 @@ define(function(){
 					<div>${item.twoTitle}</div>
 				`
 			}).join("")
-			// this.main.innerHTML = this.data.map(function(item){
-
-			// 	var html = item.content.map(function(el){
-			// 		return `
-			// 			<div>${el.twoTitle}</div>
-			// 		`
-			// 	}).join("")
-
-			// 	return `
-			// 		<div>
-			// 			${html}
-			// 		</div>
-			// 	`
-			// }).join("")
 		},
 		bindEvent(){
 			var that = this;
 			var t = null;
 			this.menu.addEventListener("mouseover",function(e){
-				console.log(t)
-				clearTimeout(t);
 				if(e.target.classList.contains("left")){
+					clearTimeout(t);
 					that.main.classList.add("active")
 					that.renderTwo(e.target.getAttribute("data-index"));
 				}				
@@ -62,8 +47,8 @@ define(function(){
 					t = setTimeout(function(){
 						that.main.innerHTML = "";
 						that.main.classList.remove("active");
-					},300);	
-					console.log(e.target,t)
+						console.log(e.target,t)
+					},300);						
 				}
 			})
 
@@ -76,8 +61,7 @@ define(function(){
 					that.main.classList.remove("active");
 				},300);	
 			})
-
-			
+		
 		}
 	}
 	return Menu;
