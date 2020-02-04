@@ -1,0 +1,31 @@
+
+
+function Person(){
+	
+	return a;
+}
+
+var x = new Person()
+
+a的类型是（数字，字符串，布尔，null，undefined）时  x === Person函数里的this
+
+a的类型是引用类型数据  x === a
+
+
+
+function f(){
+	return f; // f的类型是function      函数是引用类型数据
+}
+
+
+实例对象  instanceof 构造函数
+
+	new f() instanceof f
+	===
+	函数 instanceof 构造函数
+
+所有函数的构造函数都是Function
+
+
+f instanceof Function   ==>  true
+f instanceof f  ==> false 

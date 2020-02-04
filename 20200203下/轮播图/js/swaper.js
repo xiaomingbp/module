@@ -15,6 +15,7 @@ define(function(){
 		}
 		Object.assign(this,defaults,obj);
 		this.init();
+		
 	}
 	Swaper.prototype = {
 		constructor:Swaper,

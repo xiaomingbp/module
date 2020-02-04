@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			background-color: #fefefe;
+			height:40px;
+			height:400px;
+			position: relative;
+			width:200px;
+		}
+		.menu{
+			float: left;
+			width: 200px;
+			height: 100%;
+			border:1px solid #aaa;
+		}
+		.menu>.left{
+			height:40px;
+			line-height: 40px;
+			text-indent: 20px;
+		}
+		.main{
+			width:500px;
+			height: 100%;
+			position: absolute;
+			background-color: #aaa;
+			left:202px;
+			top:0px;
+			border:1px solid #aaa;
+			overflow: hidden;
+			display: none;
+		}
+		.main.active{
+			display: block;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="menu"></div>
+		<div class="main"></div>		
+	</div>
+</body>
+<script src="lib/require.js" data-main="js/main"></script>
+</html>
