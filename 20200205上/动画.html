@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box{
+			width:100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<script>
+		var box = document.getElementById("box")
+		function move(){
+			setTimeout(function(){
+				box.style.left = box.offsetLeft + 2  + "px";
+				if(box.offsetLeft<1000){
+					move();
+				}				
+			},1000/60);
+		}
+		//move();
+
+		function moves(){
+			box.style.left = box.offsetLeft + 10  + "px";
+			if(box.offsetLeft<1000){
+				window.requestAnimationFrame(moves)
+			}
+		}
+		//window.requestAnimationFrame(moves);
+
+
+		var t = setInterval(function(){
+			box.style.left = box.offsetLeft + 10  + "px";
+			if(box.offsetLeft>=1000){
+				clearInterval(t);
+			}
+		},1000/60);
+
+	</script>
+</body>
+</html>

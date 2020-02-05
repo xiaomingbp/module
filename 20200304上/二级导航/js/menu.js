@@ -15,7 +15,6 @@ define(function(){
 		constructor:Menu,
 		init(){
 			this.renderOne();
-			//this.renderTwo();
 			this.bindEvent();
 		},
 		renderOne(){
@@ -42,6 +41,7 @@ define(function(){
 					that.renderTwo(e.target.getAttribute("data-index"));
 				}				
 			})
+
 			this.menu.addEventListener("mouseout",function(e){
 				if(e.target.classList.contains("left")){
 					t = setTimeout(function(){
@@ -55,6 +55,7 @@ define(function(){
 			that.main.addEventListener("mouseover",function(){
 				clearTimeout(t)
 			})
+
 			that.main.addEventListener("mouseout",function(){
 				t = setTimeout(function(){
 					that.main.innerHTML = "";
