@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="排序" class="paixu">
+	<div class="box">
+		
+	</div>
+	<script>
+		
+		var arr = ["tttttt","bbbbb","wwwww","dddddd","aaaaaa"] // 数据池
+
+
+		function render(){
+			var box = document.querySelector(".box");
+			box.innerHTML = arr.map(function(item){
+				return `<div>${item}</div>`
+			}).join("")
+		}
+
+		render()
+
+		var paixu = document.querySelector(".paixu")
+
+		// 排序：
+		// 先操作数组
+		// 然后在重新渲染
+		paixu.onclick = function(){
+
+			arr.sort(function(){
+				return -1;
+			})
+
+			render()
+		}
+		
+
+	</script>
+</body>
+</html>

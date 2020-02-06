@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="box">
+		
+	</div>
+	<script>
+		var arr = [
+			{
+				name:"xiaoming",
+				age:20,
+				sex:true
+			},
+			{
+				name:"baiping",
+				age:18,
+				sex:false
+			},
+			{
+				name:"alamusi",
+				age:3,
+				sex:true
+			},
+			{
+				name:"yongsheng",
+				age:13,
+				sex:true
+			}
+		]
+
+		arr.sort(function(a,b){
+			//降序
+			//比较时只能比较基本类型值不能是引用类型
+			if(a["name"] > b["name"]){
+				return -1;
+			}
+			if(a["name"] < b["name"]){
+				return 1;  // a和b调换位置的意思
+			}
+			return 0;
+		})
+
+		/*
+			a和b是数组里相邻的两个元素，a是前面的元素，b是后面的元素
+			return 1时,a和b的位置调换一下。
+
+		 */
+
+		var box = document.querySelector(".box")
+
+		box.innerHTML = arr.map(function(item){
+			return `<div>${item.name}</div>`
+		}).join("")
+	</script>
+</body>
+</html>

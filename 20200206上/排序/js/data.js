@@ -1,0 +1,46 @@
+define(function(){
+	return [
+		{
+			id:1,
+			name:"xiaoming",
+			age:20,
+			sex:true
+		},
+		{
+			id:2,
+			name:"baiping",
+			age:18,
+			sex:false
+		},
+		{
+			id:3,
+			name:"alamusi",
+			age:3,
+			sex:true
+		},
+		{
+			id:4,
+			name:"yongsheng",
+			age:13,
+			sex:true
+		},
+		{
+			id:5,
+			name:"hanshu",
+			age:17,
+			sex:false
+		},
+		{
+			id:6,
+			name:"huzhenyang",
+			age:22,
+			sex:true
+		},
+		{
+			id:7,
+			name:"sunyumeng",
+			age:16,
+			sex:false
+		}
+	]
+})
